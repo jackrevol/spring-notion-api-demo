@@ -1,0 +1,13 @@
+notion:
+  database:
+    id: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    # When you have a DB page address like the one below:
+    # https://www.notion.so/dc71e4337cc641bbb9247f8f714edd2f?v=e1bfc955260149f4841c781df2b24547
+    # dc71e4337cc641bbb9247f8f714edd2f is the ID
+  api:
+    version: 2022-06-28
+    # https://developers.notion.com/reference/versioning
+    secret: secret_asdf
+    # get from https://www.notion.so/my-integrations
+    # connect integration to notion page first
+    # see https://developers.notion.com/docs/create-a-notion-integration
