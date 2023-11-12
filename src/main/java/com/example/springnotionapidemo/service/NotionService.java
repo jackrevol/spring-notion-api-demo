@@ -14,4 +14,6 @@ public class NotionService {
         return notionClient.queryDataBase();
     }
 
+    public String update(String body){return  notionClient.updateDataBase(body);}
+
 }

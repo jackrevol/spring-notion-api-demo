@@ -43,4 +43,25 @@ public class NotionClient {
         }
     }
 
+
+    public String updateDataBase(String body){
+        try {
+            String uri = UriComponentsBuilder.fromHttpUrl("https://api.notion.com/v1/databases/" + databaseId )
+                    .toUriString();
+
+
+            System.out.println(body);
+            return webClient.patch()
+                    .uri(uri)
+                    .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
+                    .header(HttpHeaders.AUTHORIZATION, "Bearer " + accessToken)
+                    .header("Notion-Version", notionVersion)
+                    .bodyValue(body)
+                    .retrieve()
+                    .bodyToMono(String.class).block();
+
+        } catch (Exception e) {
+            return e.toString();
+        }
+    }
 }
